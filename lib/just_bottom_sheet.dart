@@ -1,7 +1,6 @@
 library just_bottom_sheet;
 
 import 'dart:math';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:just_bottom_sheet/drag_zone_position.dart';
@@ -264,7 +263,7 @@ class _JustBottomSheetPageState extends State<JustBottomSheetPage>
                               final delta =
                                   details.dragDetails?.primaryDelta?.abs() ?? 0;
                               if (details.metrics.pixels <= 0) {
-                                if (delta > 30 && !willPop && isPointerDown) {
+                                if (delta > 15 && !willPop && isPointerDown) {
                                   willPop = true;
                                 }
                                 scrollPosition = details.metrics.pixels;
